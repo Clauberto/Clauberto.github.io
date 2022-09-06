@@ -1,3 +1,5 @@
+
+
 .logo{
     width: 15%;
     height: 20vh;
@@ -69,8 +71,8 @@ flex-direction: column;
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
 }
-.opcao{
-    width: 50%;
+#opcao{
+    width: 80%;
     height: 30vh;
     border-style: inset;
     border-color: rgb(255, 65, 65);
@@ -91,13 +93,29 @@ flex-direction: column;
     text-align: center;
     margin-top: 0;
 }
-.kleber{
-    display: flex;
-    flex-direction: row;
+
+.inputes{
+    width: 90%;
+    height: 4vh;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    display: block;
 }
-.inputes{
-    
+.av{
+    background-color: rgb(255, 65, 65); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
+
+
+
+
