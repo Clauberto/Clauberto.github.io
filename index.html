@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calculadora Tamanho do Útero</title>
+  <title>Calculadora Profundidade do Útero</title>
   <style>
     /* Estilo para centralizar a div */
     html, body {
@@ -26,7 +26,7 @@
     /* Estilo para o título */
     h1 {
       text-align: center;
-      font-size: 50px
+      font-size: 28px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
@@ -79,7 +79,7 @@
         // Exibir mensagem de erro na página
         document.getElementById("resultado").innerHTML = "<p style='color: #bc0b08;'>Por favor, digite um valor válido para a altura.</p>";
       } else {
-        document.getElementById("resultado").innerHTML = "O tamanho provável do útero é de " + tamanhoUtero.toFixed(2) + " cm.";
+        document.getElementById("resultado").innerHTML = "A profundidade provável do útero é de " + tamanhoUtero.toFixed(2) + " cm.";
       }
     }
   </script>
@@ -89,7 +89,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Cálculo do tamanho do útero</h1>
+    <h1>Cálculo de profundidade do útero</h1>
 
     <form>
       <label for="altura">Digite sua altura (em metros):</label>
