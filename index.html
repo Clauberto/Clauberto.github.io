@@ -1,32 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Restaurante do Mine</title>
-    <link rel="icon" type="image/x-icon" href="burg.ico">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="header"><img src="logo.png" class="logo"></header>
-    <Br><div class="kleber">
-    <div id="opcao">
-      <a href="pedido.html"><img src="burgermine.png" class="opimagem"></a>
-      <a href="pedido.html"><p class="texto">Fazer Pedido</p></a>
-    </div>
-  
-    <br><div id="opcao">
-      <a href="funcionario.html"><img src="steve.png" class="opimagem"></a>
-      <a href="funcionario.html"><p class="texto">Reportar Funcionario</p></a>
-    </div>
+<head>
+  <title>Cálculo do tamanho do útero</title>
+  <style>
+    /* Estilo para centralizar a div */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
 
-    <Br><div id="opcao">
-      <a href="faq.html"><img src="book.png" class="opimagem"></a>
-      <a href="faq.html"><p class="texto">FAQ</p></a>
-    </div>
+    /* Estilo para a div de conteúdo */
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo para o título */
+    h1 {
+      text-align: center;
+      font-size: 4.5vh;
+    }
+
+    /* Estilo para o formulário */
+    form {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Estilo para o resultado */
+    #resultado {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Estilo para o botão */
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilos responsivos para telas de smartphones */
+    @media (max-width: 500px) {
+      .container {
+        max-width: 100%;
+        margin: 10px;
+      }
+    }
+  </style>
+  <script>
+    function calcularTamanhoUtero(event) {
+      event.preventDefault(); // Impede o envio do formulário padrão
+
+      // Obter o valor da altura digitada pelo usuário
+      var altura = parseFloat(document.getElementById("altura").value);
+
+      // Calcular o tamanho provável do útero
+      var tamanhoUtero = altura * 0.07 * 100;
+
+      // Exibir o resultado na página
+      if (isNaN(altura)) {
+        // Exibir mensagem de erro na página
+        document.getElementById("resultado").innerHTML = "<p style='color: #bc0b08;'>Por favor, digite um valor válido para a altura.</p>";
+      } else {
+        document.getElementById("resultado").innerHTML = "O tamanho provável do útero é de " + tamanhoUtero.toFixed(2) + " cm.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cálculo do tamanho do útero</h1>
+
+    <form>
+      <label for="altura">Digite sua altura (em metros):</label>
+      <br>
+      <input type="number" id="altura" step="0.01" min="0" placeholder="Ex: 1,65">
+      <br><br>
+      <button onclick="calcularTamanhoUtero(event)">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
   </div>
-
-
-
-
-  </body>
+</body>
 </html>
